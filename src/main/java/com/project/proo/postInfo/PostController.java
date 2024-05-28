@@ -180,6 +180,9 @@ public ResponseEntity<?> addPosts(@PathVariable Integer userid,
             videoUrl = uploadToCloudinary(video, "video");
         }
 
+
+
+        
         // Save post with image and/or video URLs
         Post newPost = new Post(caption,audiance, imageUrl, videoUrl);
         newPost.setUser(user);
