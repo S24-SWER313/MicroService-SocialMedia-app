@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ApigatewayApplication",
+            "request": "launch",
+            "mainClass": "com.gateway.apigateway.ApigatewayApplication"
+        },
+        {
+            "type": "java",
+            "name": "ConfigserverApplication",
+            "request": "launch",
+            "mainClass": "com.config.configserver.ConfigserverApplication",
+            "projectName": "configserver",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54111 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=configserver"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-ConfigServerApplication<config-server>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -13,24 +27,25 @@
         },
         {
             "type": "java",
-            "name": "Spring Boot-UserserviceApplication<userservice>",
+            "name": "Spring Boot-UserserviceApplication<8300>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.user.userservice.UserserviceApplication",
             "projectName": "userservice",
-            "args": "",
+            "args": "--server.port=8300",
             "envFile": "${workspaceFolder}/.env",
             "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=62500 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=userservice"
         },
         {
             "type": "java",
-            "name": "Spring Boot-ApiGatewayApplication<api_gateway>",
+            "name": "Spring Boot-ApigatewayApplication<apigateway>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.gateway.api_gateway.ApiGatewayApplication",
-            "projectName": "api_gateway",
+            "mainClass": "com.gateway.apigateway.ApigatewayApplication",
+            "projectName": "apigateway",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53043 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=apigateway"
         },
         {
             "type": "java",
@@ -40,7 +55,19 @@
             "mainClass": "com.registration.discoveryservice.DiscoveryserviceApplication",
             "projectName": "discoveryservice",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54620 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=discoveryservice"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PostserviceApplication<postservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mypost.postservice.PostserviceApplication",
+            "projectName": "postservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=56398 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=postservice"
         }
     ]
 }
