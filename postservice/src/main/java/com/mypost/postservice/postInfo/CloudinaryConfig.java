@@ -18,7 +18,7 @@ public class CloudinaryConfig {
     private String apiSecret;
 
     @Bean
-    public Cloudinary cloudinary() {
+    Cloudinary cloudinary() {
         Cloudinary cloudinary = new Cloudinary();
         cloudinary.config.cloudName = cloudName;
         cloudinary.config.apiKey = apiKey;

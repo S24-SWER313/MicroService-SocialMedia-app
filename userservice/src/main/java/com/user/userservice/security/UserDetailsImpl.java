@@ -1,111 +1,111 @@
-// package com.user.userservice.security;
+package com.user.userservice.security;
 
-// import java.util.Collection;
-// import java.util.List;
-// import java.util.Objects;
-// import java.util.stream.Collectors;
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
-// import org.springframework.security.core.GrantedAuthority;
-// import org.springframework.security.core.authority.SimpleGrantedAuthority;
-// import org.springframework.security.core.userdetails.UserDetails;
-
-
-// import com.fasterxml.jackson.annotation.JsonIgnore;
-// import com.user.userservice.usreInfo.User;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 
-// public class UserDetailsImpl implements UserDetails {
-//   private static final long serialVersionUID = 1L;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.user.userservice.usreInfo.User;
 
-//   private Integer id;
 
-//   private String username;
+public class UserDetailsImpl implements UserDetails {
+  private static final long serialVersionUID = 1L;
 
-//   private String email;
+  private Integer id;
 
-//   @JsonIgnore
-//   private String password;
+  private String username;
 
-//   private Collection<? extends GrantedAuthority> authorities;
+  private String email;
 
-//   // public UserDetailsImpl(Long id, String username, String email, String password,
-//   //     Collection<? extends GrantedAuthority> authorities) {
-//   //   this.id = id;
-//   //   this.username = username;
-//   //   this.email = email;
-//   //   this.password = password;
-//   //   this.authorities = authorities;
-//   // }
+  @JsonIgnore
+  private String password;
 
-//   public UserDetailsImpl(Integer id2, String username2, String email2, String password2) {
-//     this.id = id2;
-//     this.username = username2;
-//     this.email = email2;
-//     this.password = password2;
-//   }
+  private Collection<? extends GrantedAuthority> authorities;
 
-//   public static UserDetailsImpl build(User user) {
-//     // List<GrantedAuthority> authorities = user.getRoles().stream()
-//     //     .map(role -> new SimpleGrantedAuthority(role.getName().name()))
-//     //     .collect(Collectors.toList());
+  // public UserDetailsImpl(Long id, String username, String email, String password,
+  //     Collection<? extends GrantedAuthority> authorities) {
+  //   this.id = id;
+  //   this.username = username;
+  //   this.email = email;
+  //   this.password = password;
+  //   this.authorities = authorities;
+  // }
 
-//     return new UserDetailsImpl(
-//         user.getId(), 
-//         user.getUsername(), 
-//         user.getEmail(),
-//         user.getPassword());
-//   }
+  public UserDetailsImpl(Integer id2, String username2, String email2, String password2) {
+    this.id = id2;
+    this.username = username2;
+    this.email = email2;
+    this.password = password2;
+  }
 
-//   @Override
-//   public Collection<? extends GrantedAuthority> getAuthorities() {
-//     return null ;
-//   }
+  public static UserDetailsImpl build(User user) {
+    // List<GrantedAuthority> authorities = user.getRoles().stream()
+    //     .map(role -> new SimpleGrantedAuthority(role.getName().name()))
+    //     .collect(Collectors.toList());
 
-//   public Integer getId() {
-//     return id;
-//   }
+    return new UserDetailsImpl(
+        user.getId(), 
+        user.getUsername(), 
+        user.getEmail(),
+        user.getPassword());
+  }
 
-//   public String getEmail() {
-//     return email;
-//   }
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    return null ;
+  }
 
-//   @Override
-//   public String getPassword() {
-//     return password;
-//   }
+  public Integer getId() {
+    return id;
+  }
 
-//   @Override
-//   public String getUsername() {
-//     return username;
-//   }
+  public String getEmail() {
+    return email;
+  }
 
-//   @Override
-//   public boolean isAccountNonExpired() {
-//     return true;
-//   }
+  @Override
+  public String getPassword() {
+    return password;
+  }
 
-//   @Override
-//   public boolean isAccountNonLocked() {
-//     return true;
-//   }
+  @Override
+  public String getUsername() {
+    return username;
+  }
 
-//   @Override
-//   public boolean isCredentialsNonExpired() {
-//     return true;
-//   }
+  @Override
+  public boolean isAccountNonExpired() {
+    return true;
+  }
 
-//   @Override
-//   public boolean isEnabled() {
-//     return true;
-//   }
+  @Override
+  public boolean isAccountNonLocked() {
+    return true;
+  }
 
-//   @Override
-//   public boolean equals(Object o) {
-//     if (this == o)
-//       return true;
-//     if (o == null || getClass() != o.getClass())
-//       return false;
-//     UserDetailsImpl user = (UserDetailsImpl) o;
-//     return Objects.equals(id, user.id);
-//   }
-// }
+  @Override
+  public boolean isCredentialsNonExpired() {
+    return true;
+  }
+
+  @Override
+  public boolean isEnabled() {
+    return true;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (o == null || getClass() != o.getClass())
+      return false;
+    UserDetailsImpl user = (UserDetailsImpl) o;
+    return Objects.equals(id, user.id);
+  }
+}

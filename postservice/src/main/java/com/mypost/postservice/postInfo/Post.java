@@ -16,8 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.mypost.postservice.Hashtagee.Hashtag;
-// import com.project.proo.usreInfo.User;
+import com.mypost.postservice.Userr;
 
 
 @Entity
@@ -83,8 +82,8 @@ public class Post {
     // @JoinColumn(name = "user_id")
     // @JsonIgnore
     // private User user;
-    
-private User user;
+    @Column
+private Integer userId;
  
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
     //@JsonManagedReference

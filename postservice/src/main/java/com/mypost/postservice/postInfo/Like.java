@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 // import com.project.proo.usreInfo.User;
+import com.mypost.postservice.Userr;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -22,5 +23,6 @@ public abstract class Like {
     // @ManyToOne
     // @JoinColumn(name = "user_id")
     // @JsonBackReference
-    private  User user; 
+    @Column
+    private Integer userId;
 }

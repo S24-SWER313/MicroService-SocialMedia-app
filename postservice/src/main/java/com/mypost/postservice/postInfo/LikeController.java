@@ -7,7 +7,7 @@ import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
+import com.mypost.postservice.Userr;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -70,7 +70,7 @@ public CollectionModel<EntityModel<PostLike>> getAllLikesForPost(@PathVariable I
 public ResponseEntity<?> addLikeForComment(@PathVariable Integer userid,@PathVariable Integer commentId) {
     Comment comment = commentRepository.findById(commentId)
             .orElseThrow(() -> new CommentNotFoundException(commentId));
-            User user  = userClient.getUserById(userid);
+            Userr user  = userClient.getUser(userid);
 
             if (user == null) {
                 throw new RuntimeException("User not found with id: " + userid);
@@ -79,7 +79,7 @@ public ResponseEntity<?> addLikeForComment(@PathVariable Integer userid,@PathVar
     CommentLike newCommentLike = new CommentLike();
     newCommentLike.setLiked(true);
     newCommentLike.setComment(comment);
-    newCommentLike.setUser(user);
+    newCommentLike.setUserId(user.getId());
 
     // Save the CommentLike
     CommentLike savedCommentLike = commentLikeRepository.save(newCommentLike);
@@ -97,7 +97,7 @@ public ResponseEntity<?> addLikeForComment(@PathVariable Integer userid,@PathVar
 public ResponseEntity<?> addLikeForPosts(@PathVariable Integer userid,@PathVariable Integer postId) {
     Post post = PostRepository.findById(postId)
             .orElseThrow(() -> new PostNotFoundException(postId));
-            User user  = userClient.getUserById(userid);
+            Userr user  = userClient.getUser(userid);
 
             if (user == null) {
                 throw new RuntimeException("User not found with id: " + userid);
@@ -106,7 +106,7 @@ public ResponseEntity<?> addLikeForPosts(@PathVariable Integer userid,@PathVaria
     PostLike newPostLike = new PostLike();
     newPostLike.setLiked(true);
     newPostLike.setPost(post);
-    newPostLike.setUser(user);
+    newPostLike.setUserId(user.getId());
 
     // Save the CommentLike
     PostLike savedPostLike = postLikeRepository.save(newPostLike);
@@ -187,56 +187,56 @@ public EntityModel<PostLike> getPostLike(@PathVariable Integer postId, @PathVari
     return plikeAssembler.toModel(postLike);
 }
 
-///////////////////neeed to be checked///////////////////////////////////////
-@DeleteMapping("/comments/{commentId}/likes/{likeId}")
-public ResponseEntity<?> deleteCommentLike(@PathVariable Integer commentId, @PathVariable Integer likeId) {
-        Comment comment = commentRepository.findById(commentId)
-                .orElseThrow(() -> new CommentNotFoundException(commentId));
+// ///////////////////neeed to be checked///////////////////////////////////////
+// @DeleteMapping("/comments/{commentId}/likes/{likeId}")
+// public ResponseEntity<?> deleteCommentLike(@PathVariable Integer commentId, @PathVariable Integer likeId) {
+//         Comment comment = commentRepository.findById(commentId)
+//                 .orElseThrow(() -> new CommentNotFoundException(commentId));
     
-        CommentLike commentLike = comment.getLikes().stream()
-                .filter(like -> like.getId().equals(likeId))
-                .findFirst()
-                .orElseThrow(() -> new CommentLikeNotFoundException(likeId));
+//         CommentLike commentLike = comment.getLikes().stream()
+//                 .filter(like -> like.getId().equals(likeId))
+//                 .findFirst()
+//                 .orElseThrow(() -> new CommentLikeNotFoundException(likeId));
     
-        comment.getLikes().remove(commentLike);
-       // Delete the comment like using the custom query method
-     //  commentLikeRepository.deleteByIdAndComment_Id(likeId, commentId);
-     commentLikeRepository.deleteByUserIdAndCommentId(commentLike.getUser().getId(), commentId);
+//         comment.getLikes().remove(commentLike);
+//        // Delete the comment like using the custom query method
+//      //  commentLikeRepository.deleteByIdAndComment_Id(likeId, commentId);
+//      commentLikeRepository.deleteByUserIdAndCommentId(commentLike.getUserId(), commentId);
      
 
-       return ResponseEntity.noContent().build();
-   }
+//        return ResponseEntity.noContent().build();
+//    }
 
-@DeleteMapping("/likes/{likeId}")
-public ResponseEntity<?> deletePostLike(@PathVariable Integer postId, @PathVariable Integer likeId) {
-    // Log the incoming request details
-    //System.out.println("Attempting to delete like with ID: " + likeId + " for post with ID: " + postId);
+// @DeleteMapping("/likes/{likeId}")
+// public ResponseEntity<?> deletePostLike(@PathVariable Integer postId, @PathVariable Integer likeId) {
+//     // Log the incoming request details
+//     //System.out.println("Attempting to delete like with ID: " + likeId + " for post with ID: " + postId);
     
-    // Find the post
-    Post post = PostRepository.findById(postId)
-            .orElseThrow(() -> new PostNotFoundException(postId));
+//     // Find the post
+//     Post post = PostRepository.findById(postId)
+//             .orElseThrow(() -> new PostNotFoundException(postId));
 
-    // Find the like to be deleted
-    PostLike postLike = post.getLikers().stream()
-            .filter(like -> like.getId().equals(likeId))
-            .findFirst()
-            .orElseThrow(() -> new PostLikeNotFoundException(likeId));
+//     // Find the like to be deleted
+//     PostLike postLike = post.getLikers().stream()
+//             .filter(like -> like.getId().equals(likeId))
+//             .findFirst()
+//             .orElseThrow(() -> new PostLikeNotFoundException(likeId));
 
-    // Log the details of the like being deleted
-   // System.out.println("Found like to delete: " + postLike);
+//     // Log the details of the like being deleted
+//    // System.out.println("Found like to delete: " + postLike);
 
-    // Remove the like from the post's likers
-    post.getLikers().remove(postLike);
+//     // Remove the like from the post's likers
+//     post.getLikers().remove(postLike);
     
-    // Delete the like from the repository
-    postLikeRepository.deleteByUserIdAndPostId(postLike.getUser().getId(), postId);
+//     // Delete the like from the repository
+//     postLikeRepository.deleteByUserIdAndPostId(postLike.getUserId(), postId);
 
 
-    // Log the successful deletion
-   // System.out.println("Successfully deleted like with ID: " + likeId);
+//     // Log the successful deletion
+//    // System.out.println("Successfully deleted like with ID: " + likeId);
 
-    return ResponseEntity.noContent().build();
-}
+//     return ResponseEntity.noContent().build();
+// }
 
 
 }

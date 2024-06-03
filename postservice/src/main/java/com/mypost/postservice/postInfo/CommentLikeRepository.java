@@ -12,10 +12,10 @@ public interface CommentLikeRepository extends JpaRepository<CommentLike, Intege
 
     void deleteByIdAndComment_Id(Integer likeId, Integer commentId);
     // Define custom queries or methods if needed
-    @Modifying
-    @Transactional
-    @Query("DELETE FROM CommentLike cl WHERE cl.user.id = :userId AND cl.comment.id = :commentId")
-    void deleteByUserIdAndCommentId(@Param("userId") Integer userId, @Param("commentId") Integer commentId);
+    // @Modifying
+    // // @Transactional
+    // @Query("DELETE FROM CommentLike cl WHERE cl.user.id = :userId AND cl.comment.id = :commentId")
+    // void deleteByUserIdAndCommentId(@Param("userId") Integer userId, @Param("commentId") Integer commentId);
     
     
 }

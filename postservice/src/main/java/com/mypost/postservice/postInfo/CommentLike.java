@@ -15,4 +15,7 @@ public class CommentLike extends Like {
        //@JsonBackReference
         @JsonIgnore
     private Comment comment;
+
+    @Column
+    private Integer userId;
 }

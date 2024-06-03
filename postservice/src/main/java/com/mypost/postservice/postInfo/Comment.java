@@ -5,6 +5,7 @@ import java.util.List;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.mypost.postservice.Userr;
 
 // import com.project.proo.usreInfo.User;
 
@@ -38,7 +39,8 @@ public class Comment {
     // @ManyToOne
     // @JoinColumn(name = "user_id")
     // @JsonIgnore
-    private User user;
+    @Column
+    private Integer userId;
     
     @OneToMany(mappedBy = "comment", cascade = CascadeType.ALL)
     @JsonIgnore
