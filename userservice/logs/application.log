@@ -1,0 +1,84 @@
+2024-06-04 00:04:13 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:09:13 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:14:13 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:19:13 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:24:13 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:29:13 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:34:14 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:39:14 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:41:51 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-04 00:41:51 INFO  c.u.u.UserserviceApplication - Starting UserserviceApplication using Java 21.0.2 with PID 31104 (C:\Users\SAQERpc\Desktop\MicroProo\project-step-3-we-need-a-br\userservice\target\classes started by SAQERpc in C:\Users\SAQERpc\Desktop\MicroProo\project-step-3-we-need-a-br\userservice)
+2024-06-04 00:41:51 INFO  c.u.u.UserserviceApplication - The following 1 profile is active: "native"
+2024-06-04 00:41:51 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-06-04 00:41:51 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=userservice, profiles=[default], label=null, version=9bd8518f3fef632fd0fe68cae0c17454a162b382, state=null
+2024-06-04 00:41:51 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-06-04 00:41:51 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=userservice, profiles=[native], label=null, version=9bd8518f3fef632fd0fe68cae0c17454a162b382, state=null
+2024-06-04 00:41:51 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-04 00:41:51 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-04 00:41:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-04 00:41:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 376 ms. Found 1 JPA repository interface.
+2024-06-04 00:41:57 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=05ee69b4-2af4-36ee-937d-d98b6b7e76de
+2024-06-04 00:41:59 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-04 00:41:59 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-04 00:42:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8300 (http)
+2024-06-04 00:42:01 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8300"]
+2024-06-04 00:42:01 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-04 00:42:01 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-04 00:42:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-04 00:42:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 10100 ms
+2024-06-04 00:42:03 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-04 00:42:03 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-04 00:42:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-04 00:42:05 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-04 00:42:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-04 00:42:05 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25acffad
+2024-06-04 00:42:05 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-04 00:42:05 WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-06-04 00:42:08 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-04 00:42:08 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-04 00:42:09 INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-06-04 00:42:09 WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-06-04 00:42:10 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-04 00:42:13 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2024-06-04 00:42:14 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-06-04 00:42:14 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@557ee4d3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@301642d2, org.springframework.security.web.context.SecurityContextHolderFilter@1e921685, org.springframework.security.web.header.HeaderWriterFilter@784faa35, org.springframework.web.filter.CorsFilter@2843821d, org.springframework.security.web.authentication.logout.LogoutFilter@c2f803a, com.user.userservice.security.AuthTokenFilter@1164854b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ebd6c26, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77778bb4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f906167, org.springframework.security.web.session.SessionManagementFilter@5807f1b0, org.springframework.security.web.access.ExceptionTranslationFilter@341262cd, org.springframework.security.web.access.intercept.AuthorizationFilter@3f53d312]
+2024-06-04 00:42:15 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-04 00:42:15 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-04 00:42:15 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 37 ms
+2024-06-04 00:42:16 WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2024-06-04 00:42:17 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2024-06-04 00:42:17 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-06-04 00:42:17 WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-04 00:42:17 INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-06-04 00:42:17 INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-06-04 00:42:17 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-06-04 00:42:18 INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1717450938780 with initial instances count: 0
+2024-06-04 00:42:18 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application USERSERVICE with eureka with status UP
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1717450938789, current=UP, previous=STARTING]
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USERSERVICE/localhost:userservice:8300: registering service...
+2024-06-04 00:42:18 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8300"]
+2024-06-04 00:42:18 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8300 (http) with context path '/'
+2024-06-04 00:42:18 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8300
+2024-06-04 00:42:18 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_USERSERVICE/localhost:userservice:8300 - registration status: 204
+2024-06-04 00:42:19 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2024-06-04 00:42:19 INFO  c.u.u.UserserviceApplication - Started UserserviceApplication in 34.113 seconds (process running for 36.596)
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-06-04 00:42:49 INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-06-04 00:47:18 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-06-04 00:52:18 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

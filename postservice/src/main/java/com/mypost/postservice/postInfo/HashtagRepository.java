@@ -1,5 +1,5 @@
 
-package com.mypost.postservice.Hashtagee;
+package com.mypost.postservice.postInfo;
 
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;

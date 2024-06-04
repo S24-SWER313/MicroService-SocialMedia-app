@@ -4,13 +4,16 @@ package com.mypost.postservice.postInfo;
 
 import jakarta.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
+import com.mypost.postservice.Userr;
+
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,6 +21,7 @@ import java.util.stream.Collectors;
 @RestController
 @CrossOrigin
 @RequestMapping("/posts/{postId}/comments")
+
 public class CommentController {
 
     private final CommentRepository commentRepository;
@@ -25,7 +29,8 @@ public class CommentController {
     private final PostRepository postRepository;
     private final UserClient userClient;
     private final CommentLikeRepository commentLikeRepository;
-
+    
+   @Autowired
     public CommentController(CommentRepository commentRepository, CommentModelAssembler assembler,
                              PostRepository postRepository,UserClient userClient,
                              CommentLikeRepository commentLikeRepository) {
@@ -57,7 +62,7 @@ public class CommentController {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new PostNotFoundException(postId));
 
-                User user  = userClient.getUserById(commentUserId);
+                Userr user  = userClient.getUser(commentUserId);
 
                 if (user == null) {
                     throw new RuntimeException("User not found with id: " + commentUserId);
@@ -65,7 +70,7 @@ public class CommentController {
 
         newComment.setDate(LocalDateTime.now());
         newComment.setPost(post);
-        newComment.setUser(user);
+        newComment.setUserId(user.getId());
 
         Comment savedComment = commentRepository.save(newComment);
         EntityModel<Comment> entityModel = assembler.toModel(savedComment);

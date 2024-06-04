@@ -1,0 +1,121 @@
+2024-06-04 00:00:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 22ms
+2024-06-04 00:01:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2024-06-04 00:02:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:03:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2024-06-04 00:04:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2024-06-04 00:05:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 9ms
+2024-06-04 00:06:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:07:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 9ms
+2024-06-04 00:08:01 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status DOWN (replication=false)
+2024-06-04 00:08:24 WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2024-06-04 00:08:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:09:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2024-06-04 00:10:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 25ms
+2024-06-04 00:11:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:12:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 76ms
+2024-06-04 00:13:24 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2024-06-04 00:13:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:14:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 8ms
+2024-06-04 00:15:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:16:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2024-06-04 00:17:25 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2024-06-04 00:18:24 WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2024-06-04 00:18:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 8ms
+2024-06-04 00:19:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2024-06-04 00:20:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 14ms
+2024-06-04 00:21:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2024-06-04 00:22:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2024-06-04 00:23:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 5ms
+2024-06-04 00:24:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 54ms
+2024-06-04 00:25:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 20ms
+2024-06-04 00:26:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2024-06-04 00:27:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 60ms
+2024-06-04 00:28:24 WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2024-06-04 00:28:24 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 6
+2024-06-04 00:28:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:29:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:30:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2024-06-04 00:31:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:32:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 14ms
+2024-06-04 00:33:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:34:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 31ms
+2024-06-04 00:35:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 3ms
+2024-06-04 00:36:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:37:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 13ms
+2024-06-04 00:38:02 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)
+2024-06-04 00:38:24 WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2024-06-04 00:38:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:39:26 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 1ms
+2024-06-04 00:41:19 INFO  c.r.d.DiscoveryserviceApplication - Starting DiscoveryserviceApplication using Java 21.0.2 with PID 6848 (C:\Users\SAQERpc\Desktop\MicroProo\project-step-3-we-need-a-br\discoveryservice\target\classes started by SAQERpc in C:\Users\SAQERpc\Desktop\MicroProo\project-step-3-we-need-a-br\discoveryservice)
+2024-06-04 00:41:19 INFO  c.r.d.DiscoveryserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-04 00:41:19 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2024-06-04 00:41:19 INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=discoveryservice, profiles=[default], label=null, version=9bd8518f3fef632fd0fe68cae0c17454a162b382, state=null
+2024-06-04 00:41:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-04 00:41:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-04 00:41:22 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2ba9ec31-2cc0-3b7b-8549-30393aae4423
+2024-06-04 00:41:22 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-04 00:41:22 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-04 00:41:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8761 (http)
+2024-06-04 00:41:23 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8761"]
+2024-06-04 00:41:23 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-04 00:41:23 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-04 00:41:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-04 00:41:23 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4617 ms
+2024-06-04 00:41:26 INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec LegacyJacksonJson
+2024-06-04 00:41:26 INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec LegacyJacksonJson
+2024-06-04 00:41:27 INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2024-06-04 00:41:27 INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2024-06-04 00:41:29 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2024-06-04 00:41:31 WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2024-06-04 00:41:31 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-04 00:41:31 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-04 00:41:32 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2024-06-04 00:41:32 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-06-04 00:41:32 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 980 ms
+2024-06-04 00:41:32 WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-04 00:41:32 INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-06-04 00:41:32 INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-06-04 00:41:32 INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2024-06-04 00:41:32 INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1717450892957 with initial instances count: 0
+2024-06-04 00:41:33 INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2024-06-04 00:41:33 WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2024-06-04 00:41:33 INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2024-06-04 00:41:33 INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2024-06-04 00:41:33 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application DISCOVERYSERVICE with eureka with status UP
+2024-06-04 00:41:33 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8761"]
+2024-06-04 00:41:33 INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2024-06-04 00:41:33 INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2024-06-04 00:41:33 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2024-06-04 00:41:33 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2024-06-04 00:41:33 INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2024-06-04 00:41:33 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8761 (http) with context path '/'
+2024-06-04 00:41:33 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8761
+2024-06-04 00:41:33 INFO  o.s.c.n.e.s.EurekaServerInitializerConfiguration - Started Eureka Server
+2024-06-04 00:41:34 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2024-06-04 00:41:34 INFO  c.r.d.DiscoveryserviceApplication - Started DiscoveryserviceApplication in 23.832 seconds (process running for 26.809)
+2024-06-04 00:42:18 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance USERSERVICE/localhost:userservice:8300 with status UP (replication=false)
+2024-06-04 00:42:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:43:19 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)
+2024-06-04 00:43:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 2ms
+2024-06-04 00:44:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 7ms
+2024-06-04 00:45:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 23ms
+2024-06-04 00:46:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 23ms
+2024-06-04 00:46:39 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status DOWN (replication=false)
+2024-06-04 00:47:06 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)
+2024-06-04 00:47:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 4ms
+2024-06-04 00:48:29 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status DOWN (replication=false)
+2024-06-04 00:48:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 45ms
+2024-06-04 00:48:57 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)
+2024-06-04 00:48:58 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status DOWN (replication=false)
+2024-06-04 00:49:12 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)
+2024-06-04 00:49:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 15ms
+2024-06-04 00:50:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2024-06-04 00:51:33 WARN  c.n.eureka.cluster.PeerEurekaNodes - The replica size seems to be empty. Check the route 53 DNS Registry
+2024-06-04 00:51:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 79ms
+2024-06-04 00:51:50 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status DOWN (replication=false)
+2024-06-04 00:52:05 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)
+2024-06-04 00:52:06 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status DOWN (replication=false)
+2024-06-04 00:52:18 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)
+2024-06-04 00:52:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 6ms
+2024-06-04 00:53:33 INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 16ms
+2024-06-04 00:53:39 INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance POSTSERVICE/localhost:postservice:8200 with status UP (replication=false)

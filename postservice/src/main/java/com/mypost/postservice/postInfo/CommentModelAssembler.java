@@ -17,9 +17,9 @@ public class CommentModelAssembler implements RepresentationModelAssembler<Comme
                 // Link to Comment
                 linkTo(methodOn(CommentController.class).getComment(comment.getPost().getId(),comment.getId())).withSelfRel(),
                 // Link to related Post
-                linkTo(methodOn(PostController.class).one(comment.getPost().getUser().getId(),comment.getPost().getId())).withRel("posts"),
+                linkTo(methodOn(PostController.class).one(comment.getPost().getUserId(),comment.getPost().getId())).withRel("posts"),
             
-                 linkTo(UserClient.class).slash(comment.getUser().getId()).withRel("user"),
+                 linkTo(UserClient.class).slash(comment.getUserId()).withRel("user"),
                  linkTo(methodOn(LikeController.class).getAllLikesForComment(comment.getPost().getId(),comment.getId())).withRel("likes")
         );
     }

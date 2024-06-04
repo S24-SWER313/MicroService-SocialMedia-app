@@ -1,32 +1,32 @@
-// package com.user.userservice.security;
+package com.user.userservice.security;
 
-// import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotBlank;
 
-// public class LoginRequest {
-// 	@NotBlank
-//   private String username;
+public class LoginRequest {
+	@NotBlank
+  private String username;
 
-// 	@NotBlank
-// 	private String password;
+	@NotBlank
+	private String password;
 
-// 	public String getUsername() {
-// 		return username;
-// 	}
+	public String getUsername() {
+		return username;
+	}
 
-// 	public LoginRequest(@NotBlank String username, @NotBlank String password) {
-// 		this.username = username;
-// 		this.password = password;
-// 	}
+	public LoginRequest(@NotBlank String username, @NotBlank String password) {
+		this.username = username;
+		this.password = password;
+	}
 
-// 	public void setUsername(String username) {
-// 		this.username = username;
-// 	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-// 	public String getPassword() {
-// 		return password;
-// 	}
+	public String getPassword() {
+		return password;
+	}
 
-// 	public void setPassword(String password) {
-// 		this.password = password;
-// 	}
-// }
+	public void setPassword(String password) {
+		this.password = password;
+	}
+}

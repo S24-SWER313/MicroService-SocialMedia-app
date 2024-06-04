@@ -8,9 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 public interface PostLikeRepository extends JpaRepository<PostLike, Integer> {
     
-    @Modifying
-    @Transactional
-    @Query("DELETE FROM PostLike pl WHERE pl.user.id = :userId AND pl.post.id = :postId")
-    void deleteByUserIdAndPostId(@Param("userId") Integer userId, @Param("postId") Integer postId);
+    // @Modifying
+    // // @Transactional
+    // @Query("DELETE FROM PostLike pl WHERE pl.user.id = :userId AND pl.post.id = :postId")
+    // void deleteByUserIdAndPostId(@Param("userId") Integer userId, @Param("postId") Integer postId);
 }
 

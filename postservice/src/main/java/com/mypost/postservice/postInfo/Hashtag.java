@@ -1,5 +1,5 @@
 
-package com.mypost.postservice.Hashtagee;
+package com.mypost.postservice.postInfo;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.mypost.postservice.postInfo.Post;
 
 @Entity
 @Data

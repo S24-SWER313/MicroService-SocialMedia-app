@@ -16,4 +16,7 @@ public class PostLike extends Like {
        //@JsonBackReference
         @JsonIgnore
     private Post post;
+
+    @Column
+    private Integer userId;
 }

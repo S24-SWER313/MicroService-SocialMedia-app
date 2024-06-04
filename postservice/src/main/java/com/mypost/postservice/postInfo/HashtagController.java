@@ -1,5 +1,5 @@
 
-package com.mypost.postservice.Hashtagee;
+package com.mypost.postservice.postInfo;
 
 
 
@@ -7,10 +7,6 @@ import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;
 import org.springframework.web.bind.annotation.*;
-
-import com.mypost.postservice.postInfo.Post;
-import com.mypost.postservice.postInfo.PostModelAssembler;
-import com.mypost.postservice.postInfo.PostRepository;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;

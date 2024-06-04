@@ -3,8 +3,7 @@ package com.mypost.postservice.postInfo;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
-import com.mypost.postservice.Hashtagee.Hashtag;
-import com.mypost.postservice.Hashtagee.HashtagRepository;
+import com.mypost.postservice.Userr;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -30,7 +29,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
-@CrossOrigin
+
 @RequestMapping("/users/{userid}")
 public class PostController {
 
@@ -40,9 +39,10 @@ public class PostController {
     private final HashtagRepository hashtagRepository;
     private final UserClient userClient; // Add the UserClient
 
-    @Autowired
+  
     private Cloudinary cloudinary;
 
+    @Autowired
     public PostController(PostRepository postRepository, PostModelAssembler assembler,
                           HashtagRepository hashtagRepository, UserClient userClient) {
         this.postRepository = postRepository;
@@ -55,6 +55,12 @@ public class PostController {
     @GetMapping("/posts/{postid}")
     @Transactional
     public EntityModel<Post> one(@PathVariable("userid") Integer userid, @PathVariable("postid") Integer postid) {
+        Userr user  = userClient.getUser(userid);
+
+        if (user == null) {
+            throw new RuntimeException("User not found with id: " + userid);
+            }
+
         Post post = postRepository.findById(postid)
                 .orElseThrow(() -> new PostNotFoundException(postid));
         return assembler.toModel(post);
@@ -71,7 +77,7 @@ public class PostController {
     // @PostMapping("/posts")
     // public ResponseEntity<?> addPost(@PathVariable Integer userid, @Valid @RequestBody Post post) {
     //     // Fetch user details using the Feign client
-    //     User userDTO = userClient.getUserById(userid);
+    //     User userDTO = userClient.getUser(userid);
 
     //     // Set user details
     //     User user = new User();
@@ -111,7 +117,7 @@ public ResponseEntity<?> addPosts(@PathVariable Integer userid,
                                   @RequestParam(value="image" , required = false) MultipartFile image,
                                   @RequestParam(value = "video", required = false) MultipartFile video,
                                   @RequestParam("caption") String caption,@RequestParam("Audiance") Privacy audiance) {
-                                    User user  = userClient.getUserById(userid);
+                                    Userr user  = userClient.getUser(userid);
 
                                     if (user == null) {
                                         throw new RuntimeException("User not found with id: " + userid);
@@ -136,7 +142,7 @@ public ResponseEntity<?> addPosts(@PathVariable Integer userid,
         
         // Save post with image and/or video URLs
         Post newPost = new Post(caption,audiance, imageUrl, videoUrl);
-        newPost.setUser(user);
+        newPost.setUserId(user.getId());
         Post savedPost = postRepository.save(newPost);
         EntityModel<Post> entityModel = assembler.toModel(savedPost);
 
@@ -277,7 +283,7 @@ public ResponseEntity<?> editPost(
     @PostMapping("/shared-posts")
     public ResponseEntity<?> addsharePost(@PathVariable Integer userid, @RequestParam Integer postId) {
         // Fetch user details using the Feign client
-        User sharingUserDTO = userClient.getUserById(userid);
+        Userr sharingUserDTO = userClient.getUser(userid);
 
         if (sharingUserDTO == null) {
             throw new RuntimeException("User not found with id: " + userid);
@@ -285,7 +291,7 @@ public ResponseEntity<?> editPost(
     
 
         // Set user details
-        User sharingUser = new User();
+        Userr sharingUser = new Userr();
         sharingUser.setId(sharingUserDTO.getId());
         sharingUser.setUsername(sharingUserDTO.getUsername());
         sharingUser.setEmail(sharingUserDTO.getEmail());
@@ -295,7 +301,7 @@ public ResponseEntity<?> editPost(
                 .orElseThrow(() -> new PostNotFoundException(postId));
 
         Post sharedPost = new Post(originalPost.getCaption(), originalPost.getAudiance(), originalPost.getImageUrl(), originalPost.getVideoUrl());
-        sharedPost.setUser(sharingUser);
+        sharedPost.setUserId(sharingUser.getId());
         sharedPost.setOriginalPost(originalPost);
         originalPost.getSharedPosts().add(sharedPost);
         sharedPost.setShared(true);
@@ -314,7 +320,7 @@ public ResponseEntity<?> editPost(
 
     @GetMapping("/shared-posts")
     public CollectionModel<EntityModel<Post>> getSharedPosts(@PathVariable("userid") Integer userid) {
-        User user  = userClient.getUserById(userid);
+        Userr user  = userClient.getUser(userid);
 
         if (user == null) {
             throw new RuntimeException("User not found with id: " + userid);

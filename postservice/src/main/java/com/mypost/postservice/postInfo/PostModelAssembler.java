@@ -14,12 +14,12 @@ public class PostModelAssembler implements RepresentationModelAssembler<Post, En
 
     @Override
   public EntityModel<Post> toModel(Post post) {
-   Integer userId = post.getUser().getId();
+   Integer userId = post.getUserId();
 
     return EntityModel.of(post, //
         linkTo(methodOn(PostController.class).one(userId,post.getId())).withSelfRel(),
         linkTo(methodOn(PostController.class).all(userId)).withRel("Posts"),
-        linkTo(UserClient.class).slash(post.getUser().getId()).withRel("user"));
+        linkTo(UserClient.class).slash(post.getUserId()).withRel("user"));
 
 
   }
