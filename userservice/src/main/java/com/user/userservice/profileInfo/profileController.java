@@ -1,15 +1,13 @@
-package com.project.proo.profileInfo;
+package com.user.userservice.profileInfo;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.project.proo.postInfo.Post;
-import com.project.proo.postInfo.PostController;
-import com.project.proo.usreInfo.User;
-import com.project.proo.usreInfo.UserNotFoundException;
-import com.project.proo.usreInfo.UserRepository;
+import com.user.userservice.usreInfo.User;
+import com.user.userservice.usreInfo.UserNotFoundException;
+import com.user.userservice.usreInfo.UserRepository;
 
 import jakarta.validation.Valid;
 

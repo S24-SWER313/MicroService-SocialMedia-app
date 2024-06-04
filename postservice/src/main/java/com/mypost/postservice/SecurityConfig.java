@@ -113,6 +113,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableMethodSecurity
+@EnableWebSecurity
 public class SecurityConfig  {
 
     @Autowired
