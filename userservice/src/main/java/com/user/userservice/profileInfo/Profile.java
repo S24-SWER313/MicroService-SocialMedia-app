@@ -1,9 +1,9 @@
-package com.project.proo.profileInfo;
+package com.user.userservice.profileInfo;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-import com.project.proo.usreInfo.User;
+import com.user.userservice.usreInfo.User;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;

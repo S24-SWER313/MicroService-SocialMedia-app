@@ -1,4 +1,4 @@
-package com.mypost.postservice;
+package com.search.searchservice;
 
 
 

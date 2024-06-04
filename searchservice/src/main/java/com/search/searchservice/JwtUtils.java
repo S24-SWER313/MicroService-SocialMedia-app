@@ -1,4 +1,4 @@
-package com.mypost.postservice;
+package com.search.searchservice;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -18,7 +18,7 @@ import java.security.Key;
 @Component
 public class JwtUtils {
 
-    @Value("${mypost.app.jwtSecret}")
+    @Value("${search.app.jwtSecret}")
     private String jwtSecret;
 
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
@@ -45,3 +45,4 @@ public class JwtUtils {
         return false;
     }
 }
+

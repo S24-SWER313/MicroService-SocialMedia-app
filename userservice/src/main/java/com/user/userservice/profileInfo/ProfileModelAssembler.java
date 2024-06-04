@@ -1,4 +1,4 @@
-package com.project.proo.profileInfo;
+package com.user.userservice.profileInfo;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
@@ -6,7 +6,7 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
 
-import com.project.proo.usreInfo.UserController;
+
 
 @Component
 public class ProfileModelAssembler implements RepresentationModelAssembler<Profile, EntityModel<Profile>> {

@@ -84,7 +84,7 @@ public class ApigatewayApplication {
     public RouteLocator myRoutes(RouteLocatorBuilder builder, JwtAuthenticationFilter jwtAuthenticationFilter) {
         return builder.routes()
                 .route(p -> p
-                        .path("/users/1/posts/**")
+                        .path("/users/{userId}/posts/**")
                         .filters(f -> f
                                 .filter(jwtAuthenticationFilter)
                                 .circuitBreaker(config -> config
@@ -100,6 +100,14 @@ public class ApigatewayApplication {
                                         .setName("usersCircuitBreaker")
                                         .setFallbackUri("forward:/fallback-error")).addRequestHeader("Authorization", "Bearer"+JwtAuthenticationFilter.too))
                         .uri("lb://userservice"))
+                        .route(p -> p
+                        .path("/search")
+                        .filters(f -> f
+                                .filter(jwtAuthenticationFilter)
+                                .circuitBreaker(config -> config
+                                        .setName("usersCircuitBreaker")
+                                        .setFallbackUri("forward:/fallback-error")).addRequestHeader("Authorization", "Bearer"+JwtAuthenticationFilter.too))
+                        .uri("lb://searchservice"))
                 .route(p -> p
                         .path("/api/auth/**")
                         .filters(f -> f.circuitBreaker(config -> config

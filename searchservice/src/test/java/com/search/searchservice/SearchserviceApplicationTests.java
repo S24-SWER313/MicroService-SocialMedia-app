@@ -1,10 +1,10 @@
-package com.profile.profileservice;
+package com.search.searchservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProfileserviceApplicationTests {
+class SearchserviceApplicationTests {
 
 	@Test
 	void contextLoads() {

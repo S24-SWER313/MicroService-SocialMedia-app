@@ -1,4 +1,4 @@
-package com.project.proo.profileInfo;
+package com.user.userservice.profileInfo;
 
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
