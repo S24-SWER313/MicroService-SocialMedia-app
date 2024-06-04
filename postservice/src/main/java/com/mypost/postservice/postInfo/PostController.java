@@ -3,6 +3,7 @@ package com.mypost.postservice.postInfo;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import com.mypost.postservice.UserClient;
 import com.mypost.postservice.Userr;
 
 import jakarta.transaction.Transactional;

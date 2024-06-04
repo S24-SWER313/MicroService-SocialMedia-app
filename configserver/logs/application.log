@@ -1,91 +1,21 @@
-2024-06-04 00:41:00 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-06-04 00:41:00 INFO  c.c.c.ConfigserverApplication - Starting ConfigserverApplication using Java 21.0.2 with PID 30436 (C:\Users\SAQERpc\Desktop\MicroProo\project-step-3-we-need-a-br\configserver\target\classes started by SAQERpc in C:\Users\SAQERpc\Desktop\MicroProo\project-step-3-we-need-a-br\configserver)
-2024-06-04 00:41:00 INFO  c.c.c.ConfigserverApplication - No active profile set, falling back to 1 default profile: "default"
-2024-06-04 00:41:00 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-04 00:41:00 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-04 00:41:03 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b698b04d-8ff6-3217-9cbc-677eb0ad43d3
-2024-06-04 00:41:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-06-04 00:41:05 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-06-04 00:41:05 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-06-04 00:41:05 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-04 00:41:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-06-04 00:41:05 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4647 ms
-2024-06-04 00:41:07 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-06-04 00:41:08 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2024-06-04 00:41:10 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-06-04 00:41:10 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
-2024-06-04 00:41:11 INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2024-06-04 00:41:11 INFO  c.c.c.ConfigserverApplication - Started ConfigserverApplication in 12.833 seconds (process running for 15.049)
-2024-06-04 00:41:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-04 00:41:13 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-06-04 00:41:13 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-06-04 09:38:10 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-06-04 09:38:11 INFO  c.c.c.ConfigserverApplication - Starting ConfigserverApplication using Java 21.0.2 with PID 22464 (C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver\target\classes started by app in C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver)
-2024-06-04 09:38:11 INFO  c.c.c.ConfigserverApplication - No active profile set, falling back to 1 default profile: "default"
-2024-06-04 09:38:11 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-04 09:38:11 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-04 09:38:13 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b698b04d-8ff6-3217-9cbc-677eb0ad43d3
-2024-06-04 09:38:13 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-06-04 09:38:13 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-06-04 09:38:13 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-06-04 09:38:13 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-04 09:38:14 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-06-04 09:38:14 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2810 ms
-2024-06-04 09:38:14 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-06-04 09:38:15 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-06-04 09:38:15 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
-2024-06-04 09:38:15 INFO  c.c.c.ConfigserverApplication - Started ConfigserverApplication in 5.787 seconds (process running for 7.05)
-2024-06-04 09:38:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-04 09:38:50 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-06-04 09:38:50 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2024-06-04 09:50:40 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-06-04 09:50:40 INFO  c.c.c.ConfigserverApplication - Starting ConfigserverApplication using Java 21.0.2 with PID 792 (C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver\target\classes started by app in C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver)
-2024-06-04 09:50:40 INFO  c.c.c.ConfigserverApplication - No active profile set, falling back to 1 default profile: "default"
-2024-06-04 09:50:40 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-04 09:50:40 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-04 09:50:42 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b698b04d-8ff6-3217-9cbc-677eb0ad43d3
-2024-06-04 09:50:43 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-06-04 09:50:43 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-06-04 09:50:43 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-06-04 09:50:43 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-04 09:50:44 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-06-04 09:50:44 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3714 ms
-2024-06-04 09:50:54 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-06-04 09:50:54 INFO  c.c.c.ConfigserverApplication - Starting ConfigserverApplication using Java 21.0.2 with PID 5608 (C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver\target\classes started by app in C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver)
-2024-06-04 09:50:54 INFO  c.c.c.ConfigserverApplication - No active profile set, falling back to 1 default profile: "default"
-2024-06-04 09:50:54 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-04 09:50:54 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-04 09:50:56 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b698b04d-8ff6-3217-9cbc-677eb0ad43d3
-2024-06-04 09:50:57 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-06-04 09:50:57 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-06-04 09:50:57 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-06-04 09:50:57 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-04 09:50:57 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-06-04 09:50:57 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2462 ms
-2024-06-04 09:50:58 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-06-04 09:50:59 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-06-04 09:50:59 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
-2024-06-04 09:50:59 INFO  c.c.c.ConfigserverApplication - Started ConfigserverApplication in 5.83 seconds (process running for 7.137)
-2024-06-04 09:51:08 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-04 09:51:08 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-06-04 09:51:08 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-06-04 12:39:19 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
-2024-06-04 12:39:19 INFO  c.c.c.ConfigserverApplication - Starting ConfigserverApplication using Java 21.0.2 with PID 13784 (C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver\target\classes started by app in C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver)
-2024-06-04 12:39:19 INFO  c.c.c.ConfigserverApplication - No active profile set, falling back to 1 default profile: "default"
-2024-06-04 12:39:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-06-04 12:39:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-06-04 12:39:22 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b698b04d-8ff6-3217-9cbc-677eb0ad43d3
-2024-06-04 12:39:23 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
-2024-06-04 12:39:23 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2024-06-04 12:39:23 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-06-04 12:39:23 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-04 12:39:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-06-04 12:39:23 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4044 ms
-2024-06-04 12:39:25 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2024-06-04 12:39:26 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2024-06-04 12:39:26 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
-2024-06-04 12:39:26 INFO  c.c.c.ConfigserverApplication - Started ConfigserverApplication in 9.522 seconds (process running for 11.768)
-2024-06-04 12:39:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-04 12:39:46 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-06-04 12:39:46 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2024-06-04 12:44:27 INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Fetched for remote main and found 1 updates
+2024-06-05 00:02:01 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-05 00:02:01 INFO  c.c.c.ConfigserverApplication - Starting ConfigserverApplication using Java 21.0.2 with PID 13724 (C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver\target\classes started by app in C:\Users\app\Desktop\project-step-3-we-need-a-br\configserver)
+2024-06-05 00:02:01 INFO  c.c.c.ConfigserverApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-05 00:02:01 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-05 00:02:01 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-05 00:02:04 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b698b04d-8ff6-3217-9cbc-677eb0ad43d3
+2024-06-05 00:02:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+2024-06-05 00:02:06 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2024-06-05 00:02:06 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-05 00:02:06 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-05 00:02:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-05 00:02:06 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4808 ms
+2024-06-05 00:02:08 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-06-05 00:02:08 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2024-06-05 00:02:09 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path '/'
+2024-06-05 00:02:09 INFO  c.c.c.ConfigserverApplication - Started ConfigserverApplication in 9.304 seconds (process running for 12.023)
+2024-06-05 00:02:23 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-05 00:02:23 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-05 00:02:23 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-05 00:25:47 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Connection reset by peer]
+2024-06-05 00:37:21 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.io.IOException: Connection reset by peer]
