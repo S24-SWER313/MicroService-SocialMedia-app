@@ -10,7 +10,7 @@ public class SearchService {
   @Autowired
   private UserServiceFeignClient userServiceFeignClient;
 
-  public List<Userr> searchUsersByUsername(String username) {
+  public Userr searchUsersByUsername(String username) {
     return userServiceFeignClient.getUsersByUsername(username);
   }
 }

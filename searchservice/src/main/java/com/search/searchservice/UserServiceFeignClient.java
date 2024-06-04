@@ -7,6 +7,7 @@ import java.util.List;
 
 @FeignClient(name = "userservice", url = "${userservice.url}", configuration = FeignConfig.class)
 public interface UserServiceFeignClient {
-    @GetMapping("/search")
-    List<Userr> getUsersByUsername(@RequestParam("username") String username);
+
+    @GetMapping("/users/username")
+ public Userr getUsersByUsername(@RequestParam("username") String username);
 }

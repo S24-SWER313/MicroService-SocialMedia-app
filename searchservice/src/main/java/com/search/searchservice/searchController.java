@@ -12,9 +12,10 @@ public class searchController {
 
   @Autowired
   private SearchService searchService;
+  
   @GetMapping("/search")
-  public ResponseEntity<List<Userr>> searchUsers(@RequestParam("username") String username) {
-    List<Userr> users = searchService.searchUsersByUsername(username);
+  public ResponseEntity<Userr> searchUsers(@RequestParam("username") String username) {
+Userr users = searchService.searchUsersByUsername(username);
     return ResponseEntity.ok(users);
   }
 }

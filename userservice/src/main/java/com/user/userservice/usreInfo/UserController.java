@@ -202,9 +202,9 @@ public class UserController {
 
         return ResponseEntity.ok(collectionModel);
     }
-    @GetMapping("/users/username/{username}")
+    @GetMapping("/users/username")
  
-  public ResponseEntity<User> getUsersByUsername(@PathVariable String username) {
+  public ResponseEntity<User> getUsersByUsername(@RequestParam String username) {
     User users = userRepository.findOneUserByUsername(username);
     return ResponseEntity.ok(users);
   }
