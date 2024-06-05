@@ -88,10 +88,16 @@ public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests(auth ->
-            auth.requestMatchers("/api/auth/**").permitAll()
-            // .requestMatchers("/swagegr-ui.html").permitAll()
-            // .requestMatchers("/swagegr-ui/**").permitAll()
-            // .requestMatchers("/swagegr-ui.html").permitAll()
+            auth
+            .requestMatchers("/api/auth/**").permitAll()
+            .requestMatchers("/api/test/**").permitAll()
+            .requestMatchers("/swagger-ui.html").permitAll()
+            .requestMatchers("/swagger-ui/**").permitAll()
+            .requestMatchers("/v3/api-docs/**").permitAll()
+            .requestMatchers("/swagger-resources/**").permitAll()
+            .requestMatchers("/webjars/**").permitAll()
+            .requestMatchers("/favicon.ico").permitAll()
+            .requestMatchers("/error").permitAll()
                 .requestMatchers("/users/**").authenticated()
             .anyRequest().authenticated());
 

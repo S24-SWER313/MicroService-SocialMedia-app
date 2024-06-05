@@ -57,6 +57,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.UnsupportedJwtException;
 import io.jsonwebtoken.io.Decoders;
@@ -67,12 +68,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.security.Key;
+import java.util.Date;
 
 @Component
 public class JwtUtils {
 
     @Value("${mypost.app.jwtSecret}")
     private String jwtSecret;
+
+    @Value("${mypost.app.jwtExpirationMs}")
+    private int jwtExpirationMs;
 
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
@@ -107,5 +112,14 @@ public class JwtUtils {
                 .build()
                 .parseClaimsJws(token);
         return claims.getBody().getSubject();
+    }
+
+    public String generateTokenFromUsername(String username) {
+        return Jwts.builder()
+                .setSubject(username)
+                .setIssuedAt(new Date())
+                .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
+                .signWith(key(), SignatureAlgorithm.HS512)
+                .compact();
     }
 }

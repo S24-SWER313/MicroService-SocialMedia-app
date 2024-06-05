@@ -10,4 +10,9 @@ public class FeignConfig {
     Logger.Level feignLoggerLevel() {
         return Logger.Level.FULL;
     }
+
+    @Bean
+    public FeignClientInterceptor feignClientInterceptor() {
+        return new FeignClientInterceptor();
+    }
 }
