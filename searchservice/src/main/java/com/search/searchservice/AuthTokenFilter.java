@@ -1,6 +1,7 @@
 package com.search.searchservice;
 
 
+
 import java.io.IOException;
 
 import jakarta.servlet.FilterChain;
@@ -21,6 +22,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 
 public class AuthTokenFilter extends OncePerRequestFilter {
+  public static  String t;
   @Autowired
   private JwtUtils jwtUtils;
 
@@ -37,6 +39,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     try {
       String jwt = parseJwt(request);
       System.out.println("jwt"+jwt);
+      t=jwt;
       if (jwt != null &&  jwtUtils.validateJwtToken(jwt)) {
         String username = jwtUtils.getUserNameFromJwtToken(jwt);
 System.out.println("username "+username);

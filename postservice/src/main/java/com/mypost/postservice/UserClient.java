@@ -15,7 +15,7 @@ public interface UserClient {
     @GetMapping("users/{userId}")
 public Userr getUser(@PathVariable Integer userId);
 
- @GetMapping("/users/username")
- public Userr getUsersByUsername(@RequestParam("username") String username);
+@GetMapping("/users/username/{username}")
+ public Userr getUsersByUsername(@PathVariable("username") String username);
 
 }

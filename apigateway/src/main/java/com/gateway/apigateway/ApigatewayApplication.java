@@ -49,7 +49,7 @@ public class ApigatewayApplication {
                                          .addRequestHeader("Authorization", "Bearer"+JwtAuthenticationFilter.too))
                         .uri("lb://userservice"))
                         .route(p -> p
-                        .path("/search")
+                        .path("/search/**")
                         .filters(f -> f
                                 .filter(jwtAuthenticationFilter)
                                 .circuitBreaker(config -> config
@@ -57,6 +57,24 @@ public class ApigatewayApplication {
                                         .setFallbackUri("forward:/fallback-error"))
                                         .addRequestHeader("Authorization", "Bearer"+JwtAuthenticationFilter.too))
                         .uri("lb://searchservice"))
+                        .route(p -> p
+                        .path("/posts/**")
+                        .filters(f -> f
+                                .filter(jwtAuthenticationFilter)
+                                .circuitBreaker(config -> config
+                                        .setName("usersCircuitBreaker")
+                                        .setFallbackUri("forward:/fallback-error"))
+                                        .addRequestHeader("Authorization", "Bearer"+JwtAuthenticationFilter.too))
+                        .uri("lb://postservice"))
+                        .route(p -> p
+                        .path("/hashtags/**")
+                        .filters(f -> f
+                                .filter(jwtAuthenticationFilter)
+                                .circuitBreaker(config -> config
+                                        .setName("usersCircuitBreaker")
+                                        .setFallbackUri("forward:/fallback-error"))
+                                        .addRequestHeader("Authorization", "Bearer"+JwtAuthenticationFilter.too))
+                        .uri("lb://postservice"))
                 .route(p -> p
                         .path("/api/auth/**")
                         .filters(f -> f.circuitBreaker(config -> config

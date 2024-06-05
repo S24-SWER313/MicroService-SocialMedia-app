@@ -118,7 +118,7 @@ public ResponseEntity<?> addPosts(@PathVariable Integer userid,
                                   @RequestParam(value="image" , required = false) MultipartFile image,
                                   @RequestParam(value = "video", required = false) MultipartFile video,
                                   @RequestParam("caption") String caption,@RequestParam("Audiance") Privacy audiance) {
-                                    Userr user  = userClient.getUser(userid);
+                        Userr user  = userClient.getUser(userid);
 
                                     if (user == null) {
                                         throw new RuntimeException("User not found with id: " + userid);
