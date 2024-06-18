@@ -63,12 +63,16 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.22</version>
-			<scope>provided</scope>
-		</dependency>
+			<optional>true</optional>
+		  </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version> <!-- adjust version as needed -->
 		</dependency>
 		<dependency>
 			<groupId>com.cloudinary</groupId>
@@ -141,11 +145,19 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+		  <plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+			  <excludes>
+				<exclude>
+				  <groupId>org.projectlombok</groupId>
+				  <artifactId>lombok</artifactId>
+				</exclude>
+			  </excludes>
+			</configuration>
+		  </plugin>
 		</plugins>
-	</build>
+	  </build>
 
 </project>
