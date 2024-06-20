@@ -113,53 +113,157 @@
 <h3>Docker Compose Configuration</h3>
 <p>The following is an example of a <code>docker-compose.yml</code> configuration for the TrekLink project:</p>
 <pre><code>
-version: '3.8'
+
+version: '3.9'
+
 services:
-  config-service:
-    image: treklink/config-service
-    ports:
-      - "8888:8888"
-  discovery-service:
-    image: treklink/discovery-service
-    ports:
-      - "8761:8761"
-  api-gateway:
-    image: treklink/api-gateway
-    ports:
-      - "8765:8765"
-  user-service:
-    image: treklink/user-service
-    ports:
-      - "8300:8300"
-    depends_on:
-      - config-service
-      - discovery-service
-  post-service:
-    image: treklink/post-service
-    ports:
-      - "8200:8200"
-    depends_on:
-      - config-service
-      - discovery-service
-  search-service:
-    image: treklink/search-service
-    ports:
-      - "8400:8400"
-    depends_on:
-      - config-service
-      - discovery-service
-  mysql:
-    image: mysql:latest
+  user_service_db:
+    image: mysql:8.0
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: treklink
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_DATABASE: user_service_db
     ports:
       - "3306:3306"
-</code></pre>
+    networks:
+      - app-network
+    volumes:
+      - user_service_db:/var/lib/mysql
 
-<h3>Configuration</h3>
-<p>Configurations for all services are managed centrally by the config service. Ensure the <code>application.properties</code> or <code>bootstrap.properties</code> in each service points to the config server:</p>
-<pre><code>spring.config.import=optional:configserver:http://config-service:8888</code></pre>
+  post_service_db: 
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_DATABASE: post_service_db
+    ports:
+      - "3307:3307"
+    networks:
+      - app-network
+    volumes:
+      - post_service_db:/var/lib/mysql   
+
+  search: 
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_DATABASE: search
+    ports:
+      - "3308:3308"
+    networks:
+      - app-network
+    volumes:
+      - search:/var/lib/mysql       
+
+  configserver:
+    build: ./configserver
+    image: shahdqattoush/config-server:latest
+    ports:
+      - "8888:8888"
+    networks:
+      - app-network
+
+  discoveryservice:
+    build: ./discoveryservice
+    image: shahdqattoush/discovery-service:latest
+    restart: always
+    ports:
+      - "8761:8761"
+    networks:
+      - app-network
+    depends_on:
+      - configserver
+
+  postservice:
+    build:
+      context: ./postservice
+      dockerfile: Dockerfile
+    restart: always
+    image: shahdqattoush/post-service:latest
+    ports:
+      - "8200:8200"
+    networks:
+      - app-network
+    depends_on:
+      - post_service_db
+      - userservice
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://post_service_db:3306/post_service_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+      - eureka.client.service-url.defaultZone=http://discoveryservice:8761/eureka
+      - eureka.instance.prefer-ip-address=true
+      - eureka.instance.hostname=localhost
+
+  userservice:
+    build:
+      context: ./userservice
+      dockerfile: Dockerfile
+    restart: always
+    image: shahdqattoush/user-service:latest
+    ports:
+      - "8300:8300"
+    networks:
+      - app-network
+    depends_on:
+      - user_service_db
+      - discoveryservice
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://user_service_db:3306/user_service_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+      - eureka.client.service-url.defaultZone=http://discoveryservice:8761/eureka
+      - eureka.instance.prefer-ip-address=true
+      - eureka.instance.hostname=localhost 
+
+  searchservice:
+    build:
+      context: ./searchservice
+      dockerfile: Dockerfile
+    restart: always
+    image: shahdqattoush/search-service:latest
+    ports:
+      - "8400:8400"
+    networks:
+      - app-network
+    depends_on:
+      - search
+      - userservice
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://search:3306/search
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+      - eureka.client.service-url.defaultZone=http://discoveryservice:8761/eureka
+      - eureka.instance.prefer-ip-address=true
+      - eureka.instance.hostname=localhost       
+
+  apigateway:
+    image: shahdqattoush/api-gateway:latest
+    ports:
+      - "8765:8765"
+    networks:
+      - app-network
+    depends_on:
+      - discoveryservice
+      - userservice
+      - postservice 
+      - searchservice    
+    environment:
+      - eureka.client.service-url.defaultZone=http://discoveryservice:8761/eureka
+      - eureka.instance.prefer-ip-address=true
+      - eureka.instance.hostname=localhost    
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  user_service_db:
+  post_service_db:
+  search:
+
+</code></pre>
 
 <h3>Testing</h3>
 <p>You can test the services using tools like Postman or Curl by sending requests to the API Gateway, which will route them to the appropriate service.<br>We also added the Swagger tool for API testing for each service:</p>
